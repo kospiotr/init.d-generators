@@ -28,7 +28,7 @@ process(){
         exit 0
     fi
 
-    echo "${TEMPLATE}" > "/etc/init.d/${NAME}"
+    echo "${TEMPLATE}" | sudo tee --append "/etc/init.d/${NAME}"
     cat "/etc/init.d/${NAME}"
 }
 
